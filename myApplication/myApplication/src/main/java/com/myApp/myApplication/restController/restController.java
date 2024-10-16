@@ -37,20 +37,20 @@ public class restController
 	  return "hello";   
    }
    
-   @GetMapping("/employees")
-   public List<employee> getdata()
-   {
-	   return empService.employeeList();
-   }
-   
-   
-   @GetMapping("/employee/{id}")
-   public employee getByid(@PathVariable int id)
-   {
-	   employee e =  empService.getById(id);
-	   if(e==null) throw new RuntimeException("not found"+id);
-	   return e;
-   }
+//   @GetMapping("/employees")
+//   public List<employee> getdata()
+//   {
+//	   return empService.employeeList();
+//   }
+//
+//
+//   @GetMapping("/employee/{id}")
+//   public employee getByid(@PathVariable int id)
+//   {
+//	   employee e =  empService.getById(id);
+//	   if(e==null) throw new RuntimeException("not found"+id);
+//	   return e;
+//   }
    
    @PostMapping("/employeeAdd")
    public employee add(@RequestBody employee emp)
@@ -60,12 +60,12 @@ public class restController
 	   return emp;
    }
    
-   @PutMapping("/update")
-   public employee update(@RequestBody employee emp)
-   {
-	    employee e=empService.add(emp);
-	    return e;
-   }
+//   @PutMapping("/update")
+//   public employee update(@RequestBody employee emp)
+//   {
+//	    employee e=empService.add(emp);
+//	    return e;
+//   }
    
    @DeleteMapping("delete/{id}")
    public employee deleteEmp(@PathVariable int id)
