@@ -20,6 +20,8 @@ import com.myApp.myApplication.entity.employee;
 @RequestMapping("/api")
 public class restController 
 {
+
+
    private employeeService empService;
    
   
@@ -52,13 +54,13 @@ public class restController
 	   return e;
    }
    
-   @PostMapping("/employeeAdd")
-   public employee add(@RequestBody employee emp)
-   {
-	   emp.setId(0);  
-	   empService.add(emp);
-	   return emp;
-   }
+//   @PostMapping("/employeeAdd")
+//   public employee add(@RequestBody employee emp)
+//   {
+//	   emp.setId(0);
+//	   empService.add(emp);
+//	   return emp;
+//   }
    
    @PutMapping("/update")
    public employee update(@RequestBody employee emp)
